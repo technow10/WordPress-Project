@@ -1,14 +1,18 @@
 # WordPress-Project
-How to host a WordPress application on AWS
+How to host a WordPress application (website) on AWS through the AWS Management Console platform.
+
 ---
+# About the project 
+This project leverage the use of cloud services, in deploying a WordPress application in a scalable, secured and highly available infrastructure environment.
+The use of AWS VPC (Virtual Private Network) ensures we could build and deploy within a short time the neccessary privately owned, secured and scalable network
+system for hosting our servers (EC2). We also leverage the use of AWS File System (EFS) rather than the usual EBS (Elastic Block System). The reason is to ensure
+system management and maintenance flexibilty, unlike a Block Storage that is attached to a single server (EC2).
+
 # Hosting a WordPress Website on AWS
 In this repository, I have provided all the resources as well as scripts needed to deploy a WordPress website on Amazon Web Services (AWS). The AWS services and resources I employed, ensures that 
 our application  a high degree of scalability, security and high availability for a WordPress application.
 
 ## Architecture Overview
-We hosted the WordPress website with an EC2 instances within a highly available and secure architecture.
-Which includes:
-
 - A Virtual Private Cloud (VPC) with public and private subnets across two Availability Zones (AZs) for fault tolerance and high availability.
 - An Internet Gateway to allow communication between instances in the VPC and the internet.
 - Security Groups acting as a virtual firewall to control inbound and outbound traffic.
@@ -22,8 +26,6 @@ Which includes:
 - AWS Certificate Manager for managing SSL/TLS certificates.
 - AWS Simple Notification Service (SNS) for notifications related to the Auto Scaling Group activities.
 - Amazon Route 53 for domain name registration and DNS management.
-
-## Deployment Scripts
 
 ### WordPress Installation Script
 
@@ -178,11 +180,7 @@ sudo service httpd restart
 2. Follow the AWS documentation to create the required resources (VPC, subnets, Internet Gateway, etc.) as outlined in the architecture overview.
 3. Use the provided scripts to set up the WordPress application on EC2 instances within the VPC.
 4. Configure the Auto Scaling Group, Load Balancer, and other services as per the architecture.
-5. Access the WordPress website through the Load Balancer's DNS name.
-
-## Contributing
-
-Contributions to this project are welcome! Please fork the repository and submit a pull request with your enhancements.
+5. Access the WordPress website through the Load Balancer's DNS name..
 
 ## License
 
